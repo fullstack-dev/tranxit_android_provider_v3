@@ -1,0 +1,65 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/window_background"
+    android:elevation="@dimen/_4sdp"
+    android:padding="@dimen/activity_vertical_margin"
+    android:paddingTop="@dimen/_2sdp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/rate_with_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:fontFamily="@font/clanpro_narrnews"
+                android:text="@string/reason_for_cancelling"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/_13ssp" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rcvReason"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible" />
+
+
+            <EditText
+                android:id="@+id/txtComments"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_70sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@drawable/edit_text_rounded_corner_bg"
+                android:gravity="start"
+                android:hint="@string/write_your_comments"
+                android:padding="@dimen/_8sdp"
+                android:textSize="@dimen/text_14"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btnSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/button_round_primary"
+                android:text="@string/submit"
+                android:textColor="#FFF" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/tvConfirmAddressTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/clanpro_narrnews"
+        android:gravity="center"
+        android:text="@string/confrim_address"
+        android:textColor="@color/colorPrimaryText"
+        android:textSize="@dimen/text_18" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp">
+
+        <ImageView
+            android:id="@+id/ivPickup"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:contentDescription="@string/app_name"
+            android:padding="10dp"
+            app:srcCompat="@drawable/ic_marker" />
+
+        <TextView
+            android:id="@+id/tvPickUpTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/ivPickup"
+            android:text="@string/pick_up"
+            android:textColor="@color/colorSecondaryText"
+            android:textSize="@dimen/text_14" />
+
+        <TextView
+            android:id="@+id/tvPickUp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvPickUpTitle"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@id/ivPickup"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:minLines="2"
+            android:text="@string/pick_up"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="@dimen/text_14" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            android:id="@+id/ivDrop"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:contentDescription="@string/app_name"
+            android:padding="10dp"
+            app:srcCompat="@drawable/ic_marker" />
+
+        <TextView
+            android:id="@+id/tvDropTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/ivDrop"
+            android:text="@string/drop_at"
+            android:textColor="@color/colorSecondaryText"
+            android:textSize="@dimen/text_14" />
+
+        <TextView
+            android:id="@+id/tvDrop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvDropTitle"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@id/ivDrop"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:minLines="2"
+            android:text="@string/drop_at"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="@dimen/text_14" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            android:id="@+id/ivPhone"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:contentDescription="@string/app_name"
+            android:padding="10dp"
+            app:srcCompat="@drawable/ic_marker" />
+
+        <TextView
+            android:id="@+id/tvPhoneTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/ivPhone"
+            android:text="@string/phone_number"
+            android:textColor="@color/colorSecondaryText"
+            android:textSize="@dimen/text_14" />
+
+        <TextView
+            android:id="@+id/tvPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvPhoneTitle"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@id/ivPhone"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:minLines="2"
+            android:text="@string/phone_number"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="@dimen/text_14" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            android:id="@+id/ivFare"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:contentDescription="@string/app_name"
+            android:padding="10dp"
+            app:srcCompat="@drawable/ic_marker" />
+
+        <TextView
+            android:id="@+id/tvFareTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/ivFare"
+            android:text="@string/estimated_fare"
+            android:textColor="@color/colorSecondaryText"
+            android:textSize="@dimen/text_14" />
+
+        <TextView
+            android:id="@+id/tvFare"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvFareTitle"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@id/ivFare"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:minLines="2"
+            android:text="@string/estimated_fare"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="@dimen/text_14" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvCancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:background="@color/colorAccent"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="@string/cancel"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="@string/confirm"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</LinearLayout>

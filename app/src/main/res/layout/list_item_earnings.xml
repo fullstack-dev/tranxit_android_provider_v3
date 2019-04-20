@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_marginTop="@dimen/_7sdp"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/activity_vertical_margin"
+        android:paddingEnd="@dimen/activity_vertical_margin">
+
+        <TextView
+            android:id="@+id/lblTime"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:fontFamily="@font/clanpro_narrnews"
+            android:gravity="center"
+            android:text=""
+            android:textAllCaps="true"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="@dimen/text_14" />
+
+        <TextView
+            android:id="@+id/lblDistance"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:fontFamily="@font/clanpro_narrnews"
+            android:gravity="center"
+            android:text=""
+            android:textAllCaps="false"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="@dimen/text_14" />
+
+        <TextView
+            android:id="@+id/lblAmount"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:fontFamily="@font/clanpro_narrnews"
+            android:gravity="center"
+            android:text=""
+            android:textAllCaps="true"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="@dimen/text_14" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

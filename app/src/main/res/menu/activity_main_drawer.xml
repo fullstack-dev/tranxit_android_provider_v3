@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_your_trips"
+            android:title="@string/your_trips" />
+        <item
+            android:id="@+id/nav_earnings"
+            android:title="@string/earnings" />
+        <item
+            android:id="@+id/nav_instant_ride"
+            android:title="@string/instant_ride" />
+        <item
+            android:id="@+id/nav_summary"
+            android:title="@string/summary" />
+        <item
+            android:id="@+id/nav_wallet"
+            android:title="@string/wallet" />
+        <item
+            android:id="@+id/nav_card"
+            android:title="@string/nav_card" />
+        <item
+            android:id="@+id/nav_settings"
+            android:title="@string/settings" />
+        <item
+            android:id="@+id/nav_notification"
+            android:title="@string/notification_manager" />
+        <item
+            android:id="@+id/nav_help"
+            android:title="@string/help" />
+        <item
+            android:id="@+id/nav_share"
+            android:title="@string/share" />
+        <item
+            android:id="@+id/nav_document"
+            android:title="@string/walletTransactions"
+            android:visible="false" />
+        <item
+            android:id="@+id/nav_invite_referral"
+            android:title="@string/invite_referral"
+            android:visible="false" />
+        <item
+            android:id="@+id/nav_invite_friends"
+            android:title="@string/invite_friends" />
+        <item
+            android:id="@+id/nav_logout"
+            android:title="@string/logout" />
+    </group>
+
+</menu>

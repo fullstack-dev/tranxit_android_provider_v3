@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/clanpro_medium"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text="@string/invoice"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="@dimen/text_18" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:padding="8dp"
+                android:singleLine="true"
+                android:text="@string/booking_id"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/text_18" />
+
+            <TextView
+                android:id="@+id/lblBookingid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="end"
+                android:padding="8dp"
+                android:singleLine="true"
+                android:text="-"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/text_18" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:padding="8dp"
+                android:singleLine="true"
+                android:text="@string/distance_travelled"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/text_18" />
+
+            <TextView
+                android:id="@+id/lblDistanceTravelled"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="end"
+                android:padding="8dp"
+                android:singleLine="true"
+                android:text="-"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/text_18" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:padding="8dp"
+                android:singleLine="true"
+                android:text="@string/time_taken"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/text_18" />
+
+            <TextView
+                android:id="@+id/lblTimetaken"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="end"
+                android:padding="8dp"
+                android:singleLine="true"
+                android:text="-"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/text_18" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:padding="8dp"
+                android:singleLine="true"
+                android:text="@string/base_fare"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/text_18" />
+
+            <TextView
+                android:id="@+id/lblBasreFare"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="end"
+                android:padding="8dp"
+                android:singleLine="true"
+                android:text="-"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/text_18" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/distance_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:padding="8dp"
+                android:singleLine="true"
+                android:text="@string/distance_fare"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/text_18" />
+
+            <TextView
+                android:id="@+id/lblDistanceFare"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="end"
+                android:padding="8dp"
+                android:singleLine="true"
+                android:text="-"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/text_18" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/time_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:padding="8dp"
+                android:singleLine="true"
+                android:text="@string/time_fare"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/text_18" />
+
+            <TextView
+                android:id="@+id/lblTimeFare"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="end"
+                android:padding="8dp"
+                android:singleLine="true"
+                android:text="-"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/text_18" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:padding="8dp"
+                android:singleLine="true"
+                android:text="@string/tax"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/text_18" />
+
+            <TextView
+                android:id="@+id/lblTax"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="end"
+                android:padding="8dp"
+                android:singleLine="true"
+                android:text="-"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/text_18" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tips_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:padding="8dp"
+                android:singleLine="true"
+                android:text="@string/tips"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/text_18" />
+
+            <TextView
+                android:id="@+id/lblTips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="end"
+                android:padding="8dp"
+                android:singleLine="true"
+                android:text="-"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/text_18" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_bottom"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:fontFamily="@font/clanpro_medium"
+                android:padding="8dp"
+                android:singleLine="true"
+                android:text="@string/total"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_18" />
+
+            <TextView
+                android:id="@+id/lblTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@font/clanpro_medium"
+                android:gravity="end"
+                android:padding="8dp"
+                android:singleLine="true"
+                android:text="-"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_18" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llAmountToBePaid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_bottom"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:fontFamily="@font/clanpro_medium"
+                android:padding="8dp"
+                android:singleLine="true"
+                android:text="@string/amount_to_be_paid"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_18" />
+
+            <TextView
+                android:id="@+id/lblPaid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@font/clanpro_medium"
+                android:gravity="end"
+                android:padding="8dp"
+                android:singleLine="true"
+                android:text="-"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_18" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnClose"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/button_round_primary"
+            android:text="@string/close"
+            android:textColor="#FFF" />
+
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>

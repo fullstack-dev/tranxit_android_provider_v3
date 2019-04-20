@@ -1,0 +1,103 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/window_background"
+    android:elevation="@dimen/_4sdp"
+    android:padding="@dimen/activity_vertical_margin"
+    android:paddingTop="@dimen/_2sdp"
+    tools:ignore="UnusedAttribute">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/rate_with_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:fontFamily="@font/clanpro_medium"
+                android:gravity="center"
+                android:padding="@dimen/_10sdp"
+                android:text="@string/rate_your_trip"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/_14ssp" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/user_img"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_60sdp"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:src="@drawable/ic_user_placeholder" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_7sdp"
+                android:layout_marginLeft="@dimen/_7sdp"
+                android:layout_toEndOf="@+id/provider_image"
+                android:gravity="center"
+                android:orientation="vertical"
+                tools:ignore="ObsoleteLayoutParam,RtlHardcoded">
+
+                <RatingBar
+                    android:id="@+id/user_rating"
+                    style="?android:attr/ratingBarStyleIndicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:isIndicator="false"
+                    android:numStars="5"
+                    android:progressTint="@color/ratingBarColor"
+                    android:rating="5"
+                    android:stepSize="1" />
+
+                <!--<android.support.v7.widget.AppCompatRatingBar-->
+                <!--android:ID="@+ID/user_rating"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="-8sp"-->
+                <!--android:progressTint="@color/ratingBarColor"-->
+                <!--android:rating="3"-->
+                <!--android:scaleX="0.6"-->
+                <!--android:scaleY="0.6"-->
+                <!--tools:ignore="UnusedAttribute" />-->
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/comments"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_70sdp"
+                android:background="@drawable/edit_text_rounded_corner_bg"
+                android:gravity="start"
+                android:hint="@string/write_your_reviews"
+                android:inputType="text"
+                android:padding="@dimen/_8sdp"
+                android:textSize="@dimen/text_14" />
+
+            <Button
+                android:id="@+id/btnSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/button_round_primary"
+                android:text="@string/submit"
+                android:textColor="#FFF" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

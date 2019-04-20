@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.activity.setting.SettingsActivity">
+
+    <include
+        android:id="@+id/toolBar"
+        layout="@layout/toolbar_main_app" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_bottom"
+        android:fontFamily="@font/clanpro_medium"
+        android:padding="16dp"
+        android:text="@string/choose_language"
+        android:textColor="@color/colorPrimaryText"
+        android:textSize="@dimen/text_18" />
+
+    <RadioGroup
+        android:id="@+id/choose_language"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/english"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_bottom"
+            android:checked="true"
+            android:ellipsize="end"
+            android:fontFamily="@font/clanpro_narrnews"
+            android:padding="12dp"
+            android:singleLine="true"
+            android:text="@string/english"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="@dimen/text_18" />
+
+        <RadioButton
+            android:id="@+id/arabic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_bottom"
+            android:ellipsize="end"
+            android:fontFamily="@font/clanpro_narrnews"
+            android:padding="12dp"
+            android:singleLine="true"
+            android:text="@string/arabic"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="@dimen/text_18" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tvChangeDoc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        android:ellipsize="end"
+        android:focusable="true"
+        android:fontFamily="@font/clanpro_medium"
+        android:padding="16dp"
+        android:singleLine="true"
+        android:text="@string/change_document"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/text_18" />
+
+</LinearLayout>

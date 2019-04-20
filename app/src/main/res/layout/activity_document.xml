@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/ilToolbar"
+        layout="@layout/toolbar_main_app" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvDocuments"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btProceed"
+        android:layout_below="@id/ilToolbar"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:orientation="vertical"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/tvNoDocument"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:gravity="center"
+        android:text="@string/no_document_available"
+        android:textSize="@dimen/text_22"
+        android:textStyle="bold"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/btProceed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="15dp"
+        android:background="@drawable/button_round_primary"
+        android:text="@string/proceed"
+        android:textColor="#FFF" />
+
+</RelativeLayout>

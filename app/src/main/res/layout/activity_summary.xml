@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.summary.SummaryActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/toolbar_main_app" />
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true">
+
+            <LinearLayout
+                android:id="@+id/card_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <!-- Rides Card-->
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/rides_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_100sdp"
+                    android:layout_margin="@dimen/_7sdp"
+                    app:cardCornerRadius="@dimen/_4sdp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/clanpro_narrnews"
+                            android:padding="@dimen/activity_vertical_margin"
+                            android:text="@string/total_rides"
+                            android:textColor="@color/colorSecondaryText"
+                            android:textSize="@dimen/text_18"
+                            tools:ignore="RelativeOverlap" />
+
+                        <TextView
+                            android:id="@+id/rides_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:padding="@dimen/activity_vertical_margin"
+                            android:textColor="@color/colorPrimaryText"
+                            android:textSize="@dimen/text_22"
+                            tools:ignore="RelativeOverlap" />
+
+                        <RelativeLayout
+                            android:layout_width="@dimen/_60sdp"
+                            android:layout_height="@dimen/_60sdp"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/corner_radius_view"
+                            android:backgroundTint="@color/red"
+                            tools:ignore="RtlHardcoded,UnusedAttribute">
+
+                            <ImageView
+                                android:layout_width="@dimen/_25sdp"
+                                android:layout_height="@dimen/_25sdp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true"
+                                android:layout_margin="@dimen/activity_vertical_margin"
+                                android:contentDescription="@string/app_name"
+                                app:srcCompat="@drawable/total_no_of_rides" />
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <!-- Revenue-->
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/revenue_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_100sdp"
+                    android:layout_margin="@dimen/_7sdp"
+                    app:cardCornerRadius="@dimen/_4sdp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/clanpro_narrnews"
+                            android:padding="@dimen/activity_vertical_margin"
+                            android:text="@string/revenue"
+                            android:textColor="@color/colorSecondaryText"
+                            android:textSize="@dimen/text_18" />
+
+                        <TextView
+                            android:id="@+id/revenue_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:padding="@dimen/activity_vertical_margin"
+                            android:textColor="@color/colorPrimaryText"
+                            android:textSize="@dimen/text_22"
+                            tools:ignore="RelativeOverlap" />
+
+                        <RelativeLayout
+                            android:layout_width="@dimen/_60sdp"
+                            android:layout_height="@dimen/_60sdp"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/corner_radius_view"
+                            android:backgroundTint="@color/blue"
+                            tools:ignore="RtlHardcoded,UnusedAttribute">
+
+                            <ImageView
+                                android:layout_width="@dimen/_25sdp"
+                                android:layout_height="@dimen/_25sdp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true"
+                                android:layout_margin="@dimen/activity_vertical_margin"
+                                android:contentDescription="@string/app_name"
+                                app:srcCompat="@drawable/ic_revenue" />
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <!-- Scheduled-->
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/scheduled_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_100sdp"
+                    android:layout_margin="@dimen/_7sdp"
+                    app:cardCornerRadius="@dimen/_4sdp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/clanpro_narrnews"
+                            android:padding="@dimen/activity_vertical_margin"
+                            android:text="@string/schedule_rides"
+                            android:textColor="@color/colorSecondaryText"
+                            android:textSize="@dimen/text_18"
+                            tools:ignore="RelativeOverlap" />
+
+                        <TextView
+                            android:id="@+id/scheduled_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:padding="@dimen/activity_vertical_margin"
+                            android:textColor="@color/colorPrimaryText"
+                            android:textSize="@dimen/text_22"
+                            tools:ignore="RelativeOverlap" />
+
+                        <RelativeLayout
+                            android:layout_width="@dimen/_60sdp"
+                            android:layout_height="@dimen/_60sdp"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/corner_radius_view"
+                            android:backgroundTint="@color/green"
+                            tools:ignore="RtlHardcoded,UnusedAttribute">
+
+                            <ImageView
+                                android:layout_width="@dimen/_25sdp"
+                                android:layout_height="@dimen/_25sdp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true"
+                                android:layout_margin="@dimen/activity_vertical_margin"
+                                android:contentDescription="@string/app_name"
+                                app:srcCompat="@drawable/ic_scheduled" />
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <!-- Canceled-->
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/canceled_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_100sdp"
+                    android:layout_marginStart="@dimen/_7sdp"
+                    android:layout_marginTop="@dimen/_7sdp"
+                    android:layout_marginEnd="@dimen/_7sdp"
+                    android:layout_marginBottom="@dimen/_16sdp"
+                    app:cardCornerRadius="@dimen/_4sdp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/clanpro_narrnews"
+                            android:padding="@dimen/activity_vertical_margin"
+                            android:text="@string/canceled_rides"
+                            android:textColor="@color/colorSecondaryText"
+                            android:textSize="@dimen/text_18"
+                            tools:ignore="RelativeOverlap" />
+
+                        <TextView
+                            android:id="@+id/canceled_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:padding="@dimen/activity_vertical_margin"
+                            android:textColor="@color/colorPrimaryText"
+                            android:textSize="@dimen/text_22" />
+
+                        <RelativeLayout
+                            android:layout_width="@dimen/_60sdp"
+                            android:layout_height="@dimen/_60sdp"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/corner_radius_view"
+                            android:backgroundTint="@color/orange"
+                            tools:ignore="RtlHardcoded,UnusedAttribute">
+
+                            <ImageView
+                                android:layout_width="@dimen/_25sdp"
+                                android:layout_height="@dimen/_25sdp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true"
+                                android:layout_margin="@dimen/activity_vertical_margin"
+                                android:contentDescription="@string/app_name"
+                                app:srcCompat="@drawable/no_of_cancel_rides" />
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

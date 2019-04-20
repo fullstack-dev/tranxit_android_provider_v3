@@ -1,0 +1,174 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'io.fabric'
+
+android {
+    signingConfigs {
+        release {
+            keyAlias 'tranxit_provider_schedule'
+            keyPassword 'tranxit_provider_schedule'
+            storeFile file('jks/tranxit_provider_schedule.jks')
+            storePassword 'tranxit_provider_schedule'
+        }
+    }
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.tranxitpro"
+        minSdkVersion 19
+        targetSdkVersion 28
+        versionCode 5
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+        multiDexEnabled true
+
+        applicationIdSuffix '.partner'
+
+        resValue "string", "app_name", "Tranxit Partner"
+        resValue "string", "google_map_key", "AIzaSyAdXoVw-M-g4vgEOZZK7Dc9jMUlLR5xVXI"
+        resValue "string", "FACEBOOK_APP_ID", "227306957774573"
+        resValue "string", "ACCOUNT_KIT_CLIENT_TOKEN", "3f73b9bdd9f499561e32e834e7dcd1f8"
+        resValue "string", "default_notification_channel_id", "fcm_default_channel"
+        resValue "string", "google_signin_server_client_id", "405772036882-6ahcv0r2lv47mkfu2qalm6j5npheglas.apps.googleusercontent.com"
+
+        //      Sales credentials
+//        buildConfigField "String", "BASE_URL", '"https://schedule.tranxit.co/"'
+//        buildConfigField "String", "BASE_IMAGE_URL", '"https://schedule.tranxit.co/storage/"'
+//        buildConfigField "String", "TERMS_CONDITIONS", '"https://schedule.tranxit.co/privacy"'
+//        buildConfigField "String", "HELP_URL", '"https://schedule.tranxit.co/"'
+
+        //      Staging credentials
+        buildConfigField "String", "BASE_URL", '"https://schedule.deliveryventure.com/"'
+        buildConfigField "String", "BASE_IMAGE_URL", '"https://schedule.deliveryventure.com/storage/"'
+        buildConfigField "String", "TERMS_CONDITIONS", '"https://schedule.deliveryventure.com/privacy"'
+        buildConfigField "String", "HELP_URL", '"https://schedule.deliveryventure.com/"'
+
+        buildConfigField "String", "USER_PACKAGE", '"com.tranxitpro.user"'
+        buildConfigField "String", "CLIENT_SECRET", '"yVnKClKDHPcDlqqO1V05RtDRdvtrVHfvjlfqliha"'
+        buildConfigField "String", "CLIENT_ID", '"2"'
+        buildConfigField "String", "DEVICE_TYPE", '"android"'
+//        buildConfigField "String", "FCM_SERRVER_KEY", '"AAAAXnnl6xI:APA91bFRRknuERYLJrj2cDhUfmxLzOoyDYoNz_vkZfa20m9tv_WfwlwcRsY6RnvqkKwrKLEhigF9G3h2gwOn04jQL7xqz1OPWye13jMYjaBP-EDp_DHhH9WtUtNkakUujLXcNM38aggD"'
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+    }
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
+    android.applicationVariants.all { variant ->
+        variant.outputs.all {
+            outputFileName = "${variant.applicationId}_V${variant.versionCode}_VN-${variant.versionName}_" + new Date().format('yyyy-MM-dd') + ".apk"
+        }
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support:design:28.0.0'
+    implementation 'com.android.support:recyclerview-v7:28.0.0'
+    implementation 'com.android.support:cardview-v7:28.0.0'
+
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+
+    /*      dimen       */
+    implementation 'com.intuit.sdp:sdp-android:1.0.5'
+    implementation 'com.intuit.ssp:ssp-android:1.0.5'
+
+    /*      multi dex       */
+    implementation 'com.android.support:multidex:1.0.3'
+
+    //      Retrofit
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.2'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
+    implementation 'com.squareup.okhttp3:okhttp:3.11.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.11.0'
+
+    //      butter knife
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+
+    /*      Glide       */
+    implementation 'com.github.bumptech.glide:glide:4.8.0'
+
+    /*      Maps        */
+    implementation 'com.google.android.gms:play-services-maps:16.0.0'
+    implementation 'com.google.maps:google-maps-services:0.2.7'
+    implementation 'com.google.maps.android:android-maps-utils:0.5'
+    implementation 'com.google.android.gms:play-services-location:16.0.0'
+    implementation 'com.google.android.gms:play-services-places:16.0.0'
+    implementation 'com.google.android.gms:play-services-auth:16.0.1'
+
+    /*      circleImageView     */
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+
+    /*      fire base       */
+    implementation 'com.firebase:firebase-jobdispatcher:0.8.5'
+    implementation 'com.firebaseui:firebase-ui-storage:3.2.1'
+    implementation 'com.google.firebase:firebase-messaging:17.3.4'
+    implementation 'com.google.firebase:firebase-database:16.0.6'
+    implementation 'com.google.firebase:firebase-storage:16.0.5'
+    implementation 'com.google.firebase:firebase-core:16.0.6'
+
+    /*      toasty      */
+    implementation 'com.github.GrenderG:Toasty:1.3.1'
+
+    /*      easy image      */
+    implementation 'com.github.jkwiecien:EasyImage:2.0.4'
+
+    /*      easy permissions        */
+    implementation 'pub.devrel:easypermissions:1.2.0'
+
+    /*      facebook        */
+    implementation 'com.facebook.android:facebook-login:4.38.1'
+    implementation 'com.facebook.android:account-kit-sdk:4.37.0'
+
+    /*      event bus       */
+    implementation 'org.greenrobot:eventbus:3.1.1'
+
+    /*      stetho      */
+    implementation 'com.facebook.stetho:stetho-okhttp3:1.5.0'
+
+    /*      direction library       */
+    implementation 'com.akexorcist:googledirectionlibrary:1.1.1'
+
+    /*      pin view        */
+    implementation 'com.chaos.view:pinview:1.3.2'
+
+    /*      lottie      */
+    implementation 'com.airbnb.android:lottie:2.7.0'
+
+    /*      fire base chat      */
+    implementation 'me.himanshusoni.chatmessageview:chat-message-view:1.0.3'
+
+    //      payment gateway...
+    implementation 'com.braintreepayments:card-form:3.5.0'
+    implementation 'com.braintreepayments.api:braintree:2.18.1'
+    implementation 'com.stripe:stripe-android:8.0.0'
+
+    implementation 'id.zelory:compressor:2.1.0'
+
+    //QR code scan
+    implementation 'com.google.zxing:core:3.3.2'
+    implementation 'com.journeyapps:zxing-android-embedded:3.4.0'
+
+    implementation 'com.crashlytics.sdk.android:crashlytics:2.9.8'
+
+    //FloatingView
+    implementation 'com.github.recruit-lifestyle:FloatingView:2.4.0'
+
+}

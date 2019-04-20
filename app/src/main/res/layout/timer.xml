@@ -1,0 +1,36 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <TextView
+        android:id="@+id/timerValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/pauseButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="37dp"
+        android:text="timer Val"
+        android:textColor="#ffffff"
+        android:textSize="40sp" />
+
+    <Button
+        android:id="@+id/startButton"
+        android:layout_width="90dp"
+        android:layout_height="45dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="38dp"
+        android:text="start" />
+
+    <Button
+        android:id="@+id/pauseButton"
+        android:layout_width="90dp"
+        android:layout_height="45dp"
+        android:layout_alignBaseline="@+id/startButton"
+        android:layout_alignBottom="@+id/startButton"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="38dp"
+        android:text="pause" />
+
+</RelativeLayout>

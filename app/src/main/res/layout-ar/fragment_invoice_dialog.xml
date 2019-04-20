@@ -1,0 +1,227 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/_7sdp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_7sdp"
+            android:fontFamily="@font/clanpro_narrnews"
+            android:gravity="center"
+            android:text="@string/invoice"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="@dimen/text_22" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/_7sdp"
+            android:paddingLeft="@dimen/_7sdp"
+            android:paddingTop="@dimen/_7sdp"
+            android:paddingEnd="@dimen/_7sdp"
+            android:paddingRight="@dimen/_7sdp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/promotion_applied"
+                android:textColor="@color/colorSecondaryText"
+                android:textSize="@dimen/text_14" />
+
+            <TextView
+                android:id="@+id/promotion_amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/clanpro_narrnews"
+                android:gravity="end"
+                android:text="$50"
+                android:textColor="@color/colorSecondaryText"
+                android:textSize="@dimen/text_14" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/_7sdp"
+            android:paddingLeft="@dimen/_7sdp"
+            android:paddingTop="@dimen/_7sdp"
+            android:paddingEnd="@dimen/_7sdp"
+            android:paddingRight="@dimen/_7sdp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/wallet_detection"
+                android:textColor="@color/colorSecondaryText"
+                android:textSize="@dimen/text_14" />
+
+            <TextView
+                android:id="@+id/wallet_amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/clanpro_narrnews"
+                android:gravity="end"
+                android:text="$50"
+                android:textColor="@color/colorSecondaryText"
+                android:textSize="@dimen/text_14" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/_7sdp"
+            android:paddingLeft="@dimen/_7sdp"
+            android:paddingTop="@dimen/_7sdp"
+            android:paddingEnd="@dimen/_7sdp"
+            android:paddingRight="@dimen/_7sdp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:text="@string/booking_id"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/text_14" />
+
+            <TextView
+                android:id="@+id/booking_id"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/clanpro_narrnews"
+                android:gravity="end"
+                android:text="-"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/text_14" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/_7sdp"
+            android:paddingLeft="@dimen/_7sdp"
+            android:paddingTop="@dimen/_7sdp"
+            android:paddingEnd="@dimen/_7sdp"
+            android:paddingRight="@dimen/_7sdp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/total"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/text_14" />
+
+            <TextView
+                android:id="@+id/total_amount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/clanpro_narrnews"
+                android:gravity="end"
+                android:text="$50"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/text_14" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llAmountToBePaid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/_7sdp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/amount_to_be_paid"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/text_14" />
+
+            <TextView
+                android:id="@+id/payable_amount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/clanpro_narrnews"
+                android:gravity="end"
+                android:text="$50"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/text_14" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/colorPrimaryText" />
+
+        <LinearLayout
+            android:id="@+id/payment_mode_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/_7sdp"
+            tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                android:id="@+id/payment_mode_img"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:background="@drawable/ic_money"
+                android:contentDescription="@string/app_name" />
+
+            <TextView
+                android:id="@+id/lblPaymentType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:fontFamily="@font/clanpro_narrnews"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/_7sdp"
+                android:paddingLeft="@dimen/_7sdp"
+                android:text="@string/cash"
+                android:textAllCaps="true"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/text_14"
+                tools:ignore="RtlHardcoded,RtlSymmetry" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnConfirmPayment"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_round_primary"
+            android:text="@string/confirm_payment"
+            android:textColor="#FFF" />
+
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.earnings.EarningsActivity">
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/toolbar_main_app" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/clanpro_narrnews"
+            android:maxLines="1"
+            android:padding="@dimen/activity_vertical_margin"
+            android:text="@string/today_completed_target"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="@dimen/text_18" />
+
+        <RelativeLayout
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="@dimen/_120sdp"
+            android:layout_gravity="center_horizontal">
+
+            <com.tranxitpro.partner.common.CircularProgressBar
+                android:id="@+id/earnings_bar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:max="10"
+                app:min="0"
+                app:progressBarThickness="@dimen/_8sdp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/target_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/clanpro_narrnews"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:padding="@dimen/_7sdp"
+                    android:text="@string/sample_earnings"
+                    android:textColor="@color/ripple_color"
+                    android:textSize="@dimen/text_22" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/clanpro_narrnews"
+                    android:gravity="center"
+                    android:lineSpacingMultiplier="1.3"
+                    android:maxLines="1"
+                    android:text="@string/target_completed"
+                    android:textAllCaps="true"
+                    android:textColor="@color/ripple_color"
+                    android:textSize="@dimen/text_12" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/_7sdp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:paddingStart="@dimen/_7sdp"
+                android:paddingEnd="@dimen/_7sdp"
+                android:text="@string/total_earnings"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/text_14" />
+
+            <TextView
+                android:id="@+id/lblEarnings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="--"
+                android:textColor="@color/ripple_color"
+                android:textSize="@dimen/text_22" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:background="@color/colorAccent"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/activity_vertical_margin"
+            android:paddingTop="@dimen/_7sdp"
+            android:paddingEnd="@dimen/activity_vertical_margin"
+            android:paddingBottom="@dimen/_7sdp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="@font/clanpro_narrnews"
+                android:gravity="center"
+                android:text="@string/time"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_14" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="@font/clanpro_narrnews"
+                android:gravity="center"
+                android:text="@string/distance"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_14" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="@font/clanpro_narrnews"
+                android:gravity="center"
+                android:text="@string/amount"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_14" />
+
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rides_rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:scrollbars="vertical"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/errorLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/error_image"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_60sdp"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="@string/app_name"
+                android:tint="@color/colorPrimary" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/error_image"
+                android:layout_centerHorizontal="true"
+                android:padding="@dimen/activity_vertical_margin"
+                android:text="@string/no_rides"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/text_14" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

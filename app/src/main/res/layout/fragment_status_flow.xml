@@ -1,0 +1,250 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:orientation="vertical"
+    tools:context=".ui.fragment.status_flow.StatusFlowFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:paddingStart="0dp"
+        android:paddingEnd="10dp">
+
+        <ImageView
+            android:id="@+id/imgCall"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_margin="10dp"
+            android:background="@drawable/round"
+            android:contentDescription="@string/app_name"
+            android:padding="10dp"
+            app:srcCompat="@drawable/ic_call" />
+
+        <ImageView
+            android:id="@+id/imgMsg"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_margin="10dp"
+            android:background="@drawable/round"
+            android:contentDescription="@string/app_name"
+            android:padding="8dp"
+            android:tint="@color/white"
+            app:srcCompat="@drawable/ic_message" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/status_arrived_img"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:contentDescription="@string/app_name"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/ic_arrived" />
+
+            <View
+                android:id="@+id/arrived_view"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/grey" />
+
+            <ImageView
+                android:id="@+id/status_picked_up_img"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:contentDescription="@string/app_name"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/ic_pickup" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/grey" />
+
+            <ImageView
+                android:id="@+id/status_finished_img"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:contentDescription="@string/app_name"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/ic_finished" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                tools:ignore="DisableBaselineAlignment">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:paddingTop="15dp"
+                    android:gravity="center"
+                    android:paddingBottom="15dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/user_img"
+                        android:layout_width="@dimen/_60sdp"
+                        android:layout_height="@dimen/_60sdp"
+                        android:layout_marginEnd="10dp"
+                        app:srcCompat="@drawable/ic_user_placeholder" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/user_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/clanpro_book"
+                            android:gravity="start"
+                            android:maxLines="1"
+                            android:singleLine="true"
+                            android:text="@string/text_placeholder"
+                            android:textColor="@color/colorPrimaryText"
+                            android:textSize="@dimen/_12ssp" />
+
+                        <android.support.v7.widget.AppCompatRatingBar
+                            android:id="@+id/user_rating"
+                            style="?attr/ratingBarStyleSmall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_4sdp"
+                            android:isIndicator="true"
+                            android:progressTint="@color/ratingBarColor"
+                            tools:ignore="UnusedAttribute" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llWaitingTimeContainer"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:background="@color/grey" />
+
+                    <!--        RRR         -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <Button
+                            android:id="@+id/btWaitingTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_waiting_time"
+                            android:text="@string/waiting_time"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white" />
+
+                        <TextView
+                            android:id="@+id/tvTimer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="00.00.00" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:layout_marginBottom="@dimen/_7sdp"
+                android:animateLayoutChanges="true"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnCancel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:animateLayoutChanges="true"
+                    android:background="@drawable/button_round_primary"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="@string/cancel"
+                    android:textColor="#FFF" />
+
+                <Space
+                    android:id="@+id/space"
+                    android:layout_width="15dp"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/btnStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:animateLayoutChanges="true"
+                    android:background="@drawable/button_round_accent"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="@string/arrived"
+                    android:textColor="#FFF" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

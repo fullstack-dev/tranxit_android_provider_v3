@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.activity.sociallogin.SocialLoginActivity">
+
+
+    <include layout="@layout/toolbar_main" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="@string/choose_an_account"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="18sp" />
+
+
+        <TextView
+            android:id="@+id/lblFacebook"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_bottom"
+            android:drawableStart="@drawable/ic_facebook"
+            android:drawableEnd="@drawable/ic_right_arrow"
+            android:drawablePadding="12dp"
+            android:padding="16dp"
+            android:text="@string/facebook"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="@dimen/text_18" />
+
+        <TextView
+            android:id="@+id/lblGoogle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_bottom"
+            android:drawableStart="@drawable/ic_google"
+            android:drawableEnd="@drawable/ic_right_arrow"
+            android:drawablePadding="12dp"
+            android:padding="16dp"
+            android:text="@string/google"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="@dimen/text_18" />
+
+
+    </LinearLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>

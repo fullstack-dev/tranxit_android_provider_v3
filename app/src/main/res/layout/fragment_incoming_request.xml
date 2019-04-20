@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal|bottom"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/lblCount"
+        android:layout_width="@dimen/_90sdp"
+        android:layout_height="@dimen/_45sdp"
+        android:background="@drawable/half_circle"
+        android:fontFamily="@font/clanpro_narrnews"
+        android:gravity="center|bottom"
+        android:padding="8dp"
+        android:text="0"
+        android:textColor="#FFF"
+        android:textSize="@dimen/_18ssp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFF"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imgUser"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_60sdp"
+                android:layout_marginEnd="15dp"
+                android:src="@drawable/ic_user_placeholder" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center|start"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/lblUserName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="start"
+                    android:singleLine="true"
+                    android:text="@string/text_placeholder"
+                    android:textColor="@color/colorPrimaryText"
+                    android:textSize="@dimen/_13ssp" />
+
+                <android.support.v7.widget.AppCompatRatingBar
+                    android:id="@+id/ratingUser"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:isIndicator="true"
+                    android:numStars="5"
+                    android:progressTint="@color/ratingBarColor"
+                    tools:ignore="UnusedAttribute" />
+
+                <TextView
+                    android:id="@+id/lblScheduleDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="start"
+                    android:padding="@dimen/_3sdp"
+                    android:singleLine="true"
+                    android:text="@string/text_placeholder"
+                    android:textColor="@color/colorPrimaryText"
+                    android:textSize="@dimen/_13ssp"
+                    android:visibility="invisible" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="7dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="start"
+                    android:singleLine="true"
+                    android:text="@string/pick_up_location"
+                    android:textColor="@color/colorPrimaryText"
+                    android:textSize="@dimen/_13ssp" />
+
+                <TextView
+                    android:id="@+id/lblLocationName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:ellipsize="end"
+                    android:gravity="start"
+                    android:text="@string/walk_1_description"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/_13ssp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="@string/drop_location"
+                    android:textColor="@color/colorPrimaryText"
+                    android:textSize="@dimen/_13ssp" />
+
+                <TextView
+                    android:id="@+id/lblDrop"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:ellipsize="end"
+                    android:text="@string/walk_1_description"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/_13ssp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            tools:ignore="ObsoleteLayoutParam">
+
+            <Button
+                android:id="@+id/btnReject"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="7dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_round_accent"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="@string/reject"
+                android:textColor="#FFF" />
+
+            <Button
+                android:id="@+id/btnAccept"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_round_primary"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="@string/accept"
+                android:textColor="#FFF" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
